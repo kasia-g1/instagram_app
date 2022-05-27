@@ -4,10 +4,13 @@ import {
 	Image,
 	FlatList,
 	TouchableOpacity,
+	Dimensions,
 } from 'react-native';
 
 import React, { useState, useEffect } from 'react';
 import SearchBox from '../screenComponents/SearchBox';
+
+let { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
 	container: {
@@ -19,8 +22,8 @@ const styles = StyleSheet.create({
 		paddingTop: 0,
 	},
 	images: {
-		width: 120,
-		height: 120,
+		width: width / 3,
+		height: width / 3,
 	},
 });
 
