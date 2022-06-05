@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		width: '100%',
 		paddingTop: 0,
+		marginTop: 70,
 	},
 	images: {
 		width: width / 3,

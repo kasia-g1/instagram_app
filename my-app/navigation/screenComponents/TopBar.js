@@ -1,29 +1,26 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
+import InstagramWhite from '../../assets/InstagramWhite.png';
 
 const styles = StyleSheet.create({
 	container: {
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'row',
-		height: 50,
+		height: 70,
 		width: '100%',
-		padding: 5,
-		marginBottom: 0,
 	},
 
 	iconsContainer: {
 		flexDirection: 'row',
-		marginStart: 80,
+		marginStart: 115,
 	},
-
 	logo: {
-		fontFamily: 'Lobster-Regular',
-		fontSize: 25,
-		fontWeight: '500',
-		color: '#fff',
+		height: 35,
+		width: 103,
+		marginTop: 10,
 	},
 
 	icon: {
@@ -37,7 +34,7 @@ const TopBar = () => {
 	return (
 		<View style={styles.container}>
 			<TouchableOpacity>
-				<Text style={styles.logo}>Instagram </Text>
+				<Image source={InstagramWhite} style={styles.logo}></Image>
 			</TouchableOpacity>
 			<FontAwesome name='angle-down' style={styles.icon} />
 

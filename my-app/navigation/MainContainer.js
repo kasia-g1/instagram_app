@@ -11,22 +11,14 @@ import VideoScreen from './screens/VideoScreen';
 import ShoppingScreen from './screens/ShoppingScreen';
 import ProfileScreen from './screens/ProfileScreen ';
 
-// import SearchScreenDetail from './screens/SearchScreenDetail';
-
 // Screen names
 const homeName = 'Home';
 const searchName = 'Search';
 const videoName = 'Video';
 const shoppingName = 'Shopping';
 const profileName = 'Profile';
-// const searchDetailName = 'SearchDetail';
 
 const styles = StyleSheet.create({
-	tapBar: {
-		activeTintColor: 'black',
-		inactiveTintColor: 'black',
-		showLabel: false,
-	},
 	label: {
 		paddingBottom: 10,
 		fontSize: 10,
@@ -43,6 +35,11 @@ function MainContainer() {
 			<Tab.Navigator
 				initialRouteName={homeName}
 				screenOptions={({ route }) => ({
+					headerShown: false,
+					tabBarActiveTintColor: 'black',
+					tapBarInactiveTintColor: 'black',
+					tapBarShowLabel: false,
+					tapBarStyle: [{ display: 'flex' }, null],
 					tabBarIcon: ({ focused, color, size }) => {
 						let iconName;
 
@@ -64,7 +61,6 @@ function MainContainer() {
 						return <Ionicons name={iconName} size={size} color={color} />;
 					},
 				})}
-				tabBarOptions={styles.tapBar}
 				labelStyle={styles.label}
 			>
 				<Tab.Screen name={homeName} component={HomeScreen} />

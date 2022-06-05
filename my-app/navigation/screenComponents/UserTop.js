@@ -10,8 +10,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'row',
 		height: 50,
 		width: '100%',
-		padding: 5,
-		marginBottom: 0,
+		marginBottom: 12,
 	},
 
 	logo: {

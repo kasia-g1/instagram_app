@@ -10,13 +10,13 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 0,
-		margin: 0,
+		marginTop: 70,
 		backgroundColor: 'black',
 	},
 	image: {
 		width: '100%',
 		height: 400,
-		margin: 5,
+		marginTop: 5,
 	},
 });
 
@@ -35,7 +35,6 @@ export default function HomeScreen({ navigation }) {
 	return (
 		<View style={styles.container}>
 			<TopBar />
-
 			<UserTop />
 
 			<FlatList
