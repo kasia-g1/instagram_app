@@ -5,6 +5,7 @@ import {
 	FlatList,
 	TouchableOpacity,
 	Dimensions,
+	SafeAreaView,
 } from 'react-native';
 
 import React, { useState, useEffect } from 'react';
@@ -20,7 +21,6 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white',
 		width: '100%',
 		paddingTop: 0,
-		marginTop: 70,
 	},
 	images: {
 		width: width / 3,
@@ -41,7 +41,7 @@ export default function SearchScreen({ navigation }) {
 	}, []);
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<SearchBox />
 
 			<FlatList
@@ -59,6 +59,6 @@ export default function SearchScreen({ navigation }) {
 					</View>
 				)}
 			/>
-		</View>
+		</SafeAreaView>
 	);
 }

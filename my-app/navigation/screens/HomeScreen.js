@@ -1,4 +1,4 @@
-import { View, StyleSheet, Image, FlatList } from 'react-native';
+import { View, StyleSheet, Image, FlatList, SafeAreaView } from 'react-native';
 import React, { useState, useEffect } from 'react';
 import TopBar from '../screenComponents/TopBar';
 import Comments from '../screenComponents/Comments';
@@ -10,7 +10,6 @@ const styles = StyleSheet.create({
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 0,
-		marginTop: 70,
 		backgroundColor: 'black',
 	},
 	image: {
@@ -33,7 +32,7 @@ export default function HomeScreen({ navigation }) {
 	}, []);
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<TopBar />
 			<UserTop />
 
@@ -47,6 +46,6 @@ export default function HomeScreen({ navigation }) {
 					</View>
 				)}
 			/>
-		</View>
+		</SafeAreaView>
 	);
 }
