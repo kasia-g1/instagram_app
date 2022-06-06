@@ -19,10 +19,7 @@ const shoppingName = 'Shopping';
 const profileName = 'Profile';
 
 const styles = StyleSheet.create({
-	label: {
-		paddingBottom: 10,
-		fontSize: 10,
-		padding: 10,
+	bar: {
 		height: 70,
 	},
 });
@@ -37,10 +34,11 @@ function MainContainer() {
 				initialRouteName={homeName}
 				screenOptions={({ route }) => ({
 					headerShown: false,
+					tabBarShowLabel: false,
 					tabBarActiveTintColor: 'black',
 					tapBarInactiveTintColor: 'black',
 					tapBarShowLabel: false,
-					tapBarStyle: [{ display: 'flex' }, null],
+					tapBarStyle: styles.bar,
 					tabBarIcon: ({ focused, color, size }) => {
 						let iconName;
 
@@ -58,11 +56,9 @@ function MainContainer() {
 								? 'ios-person-circle'
 								: 'ios-person-circle-outline';
 						}
-
 						return <Ionicons name={iconName} size={size} color={color} />;
 					},
 				})}
-				labelStyle={styles.label}
 			>
 				<Tab.Screen name={homeName} component={HomeScreen} />
 				<Tab.Screen name={searchName} component={SearchScreen} />
