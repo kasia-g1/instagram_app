@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { View, Text, StyleSheet,SafeAreaView } from 'react-native';
+import { Text, StyleSheet,SafeAreaView } from 'react-native';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
+		backgroundColor: 'white',
 	},
 	title: {
 		fontSize: 26,

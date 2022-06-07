@@ -28,7 +28,6 @@ const Tab = createBottomTabNavigator();
 
 function MainContainer() {
 	return (
-		
 		<NavigationContainer>
 			<Tab.Navigator
 				initialRouteName={homeName}
@@ -67,7 +66,6 @@ function MainContainer() {
 				<Tab.Screen name={profileName} component={ProfileScreen} />
 			</Tab.Navigator>
 		</NavigationContainer>
-		
 	);
 }
 

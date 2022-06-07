@@ -26,13 +26,11 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 10,
 	},
 	title: {
-		fontFamily: 'Arial',
 		fontSize: 14,
 		fontWeight: '400',
 		color: 'white',
 	},
 	info: {
-		fontFamily: 'Arial',
 		fontSize: 12,
 		fontWeight: '100',
 		color: 'white',

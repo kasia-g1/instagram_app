@@ -1,5 +1,6 @@
 import { View, StyleSheet, Image, FlatList, SafeAreaView } from 'react-native';
 import React, { useState, useEffect } from 'react';
+import { StatusBar } from 'expo-status-bar';
 import TopBar from '../screenComponents/TopBar';
 import Comments from '../screenComponents/Comments';
 import UserTop from '../screenComponents/UserTop';
@@ -33,9 +34,10 @@ export default function HomeScreen({ navigation }) {
 
 	return (
 		<SafeAreaView style={styles.container}>
+			<StatusBar style='inverted' />
+
 			<TopBar />
 			<UserTop />
-
 			<FlatList
 				keyExtractor={(item) => item.id}
 				data={fotos}

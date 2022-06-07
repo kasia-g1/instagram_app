@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
 		marginStart: 10,
 	},
 	title: {
-		fontFamily: 'Arial',
 		fontSize: 12,
 		fontWeight: '400',
 		color: 'white',

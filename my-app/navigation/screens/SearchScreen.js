@@ -1,13 +1,13 @@
 import {
 	View,
 	StyleSheet,
-	Image,
 	FlatList,
 	TouchableOpacity,
 	Dimensions,
 	SafeAreaView,
 } from 'react-native';
-
+import { StatusBar } from "expo-status-bar";
+import ExpoFastImage from 'expo-fast-image';
 import React, { useState, useEffect } from 'react';
 import SearchBox from '../screenComponents/SearchBox';
 
@@ -43,6 +43,7 @@ export default function SearchScreen({ navigation }) {
 	return (
 		<SafeAreaView style={styles.container}>
 			<SearchBox />
+			<StatusBar style="inverted" />
 
 			<FlatList
 				numColumns={3}
@@ -51,8 +52,10 @@ export default function SearchScreen({ navigation }) {
 				renderItem={({ item }) => (
 					<View>
 						<TouchableOpacity onPress={() => navigation.navigate('Home')}>
-							<Image
-								source={{ uri: item.thumbnailUrl }}
+							<ExpoFastImage
+								source={{ uri: item.thumbnailUrl,
+								}}
+
 								style={styles.images}
 							/>
 						</TouchableOpacity>
